@@ -48,7 +48,12 @@ public class PlaylistTests extends BaseTest {
         Response response = PlaylistApi.update(DataLoader.getInstance().getUpdatePlaylistId(), requestPlaylist);
         assertStatusCode(response.statusCode(), StatusCode.CODE_200);
     }
-
+    @Test
+    public void ShouldBeAbleToUpdateAPlaylistB(){
+        Playlist requestPlaylist = playlistBuilder(generateName(), generateDescription(), false);
+        Response response = PlaylistApi.update(DataLoader.getInstance().getUpdatePlaylistId(), requestPlaylist);
+        assertStatusCode(response.statusCode(), StatusCode.CODE_200);
+    }
     @Story("Create a playlist story")
     @Test
     public void ShouldNotBeAbleToCreateAPlaylistWithName(){
