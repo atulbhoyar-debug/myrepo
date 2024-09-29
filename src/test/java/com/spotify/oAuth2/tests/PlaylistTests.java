@@ -49,7 +49,7 @@ public class PlaylistTests extends BaseTest {
         assertStatusCode(response.statusCode(), StatusCode.CODE_200);
     }
     @Test
-    public void ShouldBeAbleToUpdateAPlaylistB(){
+    public void ShouldBeAbleToUpdateAPlaylistA(){
         Playlist requestPlaylist = playlistBuilder(generateName(), generateDescription(), false);
         Response response = PlaylistApi.update(DataLoader.getInstance().getUpdatePlaylistId(), requestPlaylist);
         assertStatusCode(response.statusCode(), StatusCode.CODE_200);
